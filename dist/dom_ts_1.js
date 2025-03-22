@@ -1,0 +1,24 @@
+"use strict";
+// Selecting by ID (with type assertion)
+const header = document.getElementById("header");
+console.log("Header element:", header);
+// Selecting by class using querySelector
+const intro = document.querySelector(".intro");
+console.log("Intro paragraph:", intro);
+// Selecting all paragraphs
+const paragraphs = document.querySelectorAll("p");
+paragraphs.forEach((p, index) => {
+    console.log(`Paragraph ${index + 1}:`, p);
+});
+const contentDiv = document.getElementById("content");
+// Update textContent
+contentDiv.textContent = "Updated Text Content in TS!";
+// Update innerHTML
+contentDiv.innerHTML = "<em>Italic Content in TypeScript!</em>";
+const image = document.getElementById("myImage");
+const changeImageBtn = document.getElementById("changeImage");
+changeImageBtn.addEventListener("click", () => {
+    console.log("button clicked\n");
+    image.src = "images/elephant.jpg";
+    image.alt = "New Image";
+});
