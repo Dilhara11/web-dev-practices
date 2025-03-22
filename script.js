@@ -127,3 +127,45 @@ r1.question("Enter a Number: ", function(num){
     r1.close();
 });
 
+
+// lambda function
+
+// AKA Arrow function
+
+// no function keyword
+// no curly brackes if its a sigle line code 
+// return implicts if there is single expression
+
+
+//sigle line
+const greet1 = () => console.log("Hello, User!");
+const add = (a, b) => a + b;
+
+// whith multiple statements 
+const  multipl = (x, y) => {
+    let result = x * y;
+    return result;
+}
+
+// single parameter
+const squar = x => x * x;
+
+// arrow functions in array methods (map, filter, reduced)
+
+const numbers1 = [1, 2, 3, 4, 5];
+const doubled = numbers1.map(n => n * 2);
+const total = numbers1.reduce((acc, num) => acc + num, 0);
+const even = numbers.filter(num => num % 2 === 0);
+
+// in setTimeout method
+
+setTimeout(() => console.log("this will return after 2 seconds"), 2000);
+
+greet1();
+console.log(add(1, 2));
+console.log(multipl(2, 3));
+console.log(doubled);
+console.log(even);
+console.log(total);
+
+
