@@ -51,4 +51,10 @@ removeItemBtn.addEventListener("click", () => {
     }
 });
 
+// listening to the events
+const clickMeBtn = document.getElementById("clickMe") as HTMLButtonElement;
+const messageDiv = document.getElementById("message") as HTMLElement;
 
+clickMeBtn.addEventListener("click", (event: MouseEvent) =>{
+    messageDiv.textContent = "Button clicked!";
+});

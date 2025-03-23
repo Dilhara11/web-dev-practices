@@ -37,3 +37,9 @@ removeItemBtn.addEventListener("click", () => {
         todoList.removeChild(lastItem);
     }
 });
+// listening to the events
+const clickMeBtn = document.getElementById("clickMe");
+const messageDiv = document.getElementById("message");
+clickMeBtn.addEventListener("click", (event) => {
+    messageDiv.textContent = "Button clicked!";
+});
