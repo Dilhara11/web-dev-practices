@@ -31,4 +31,24 @@ changeImageBtn.addEventListener("click", () =>{
 });
 
 
+// create add and remove elements 
+
+const todoList = document.getElementById("todoList") as HTMLUListElement
+const addItemBtn = document.getElementById("addItem") as HTMLButtonElement;
+const removeItemBtn = document.getElementById("removeItem") as HTMLButtonElement
+
+
+addItemBtn.addEventListener("click", () => {
+    const newItem = document.createElement("li");
+    newItem.textContent = "New Item (TS)";
+    todoList.appendChild(newItem);
+});
+
+removeItemBtn.addEventListener("click", () => {
+    const lastItem = todoList.lastElementChild;
+    if (lastItem) {
+        todoList.removeChild(lastItem);
+    }
+});
+
 

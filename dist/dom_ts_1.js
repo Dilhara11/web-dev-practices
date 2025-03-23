@@ -22,3 +22,18 @@ changeImageBtn.addEventListener("click", () => {
     image.src = "images/elephant.jpg";
     image.alt = "New Image";
 });
+// create add and remove elements 
+const todoList = document.getElementById("todoList");
+const addItemBtn = document.getElementById("addItem");
+const removeItemBtn = document.getElementById("removeItem");
+addItemBtn.addEventListener("click", () => {
+    const newItem = document.createElement("li");
+    newItem.textContent = "New Item (TS)";
+    todoList.appendChild(newItem);
+});
+removeItemBtn.addEventListener("click", () => {
+    const lastItem = todoList.lastElementChild;
+    if (lastItem) {
+        todoList.removeChild(lastItem);
+    }
+});

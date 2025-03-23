@@ -20,6 +20,32 @@ const image = document.getElementById("myImage");
 const changeImageBtn = document.getElementById("changeImage");
 
 changeImageBtn.addEventListener("click", () =>{
-    image.setAttribute("src", "/images/elephant.jpg");
+    image.setAttribute("src", "images/elephant.jpg");
     image.setAttribute("alt", "new Image");
 });
+
+// creating, adding and removing elements 
+
+// const todoList = doucument.getElementById("todoList");
+const addItemBtn = document.getElementById("addItem");
+const removeItemBtn = document.getElementById("removeItem");
+
+addItemBtn.addEventListener("click", () => {
+    const newItem = document.createElement("li");
+    newItem.textContent = "new Task";
+    todoList.appendChild(newItem);
+    console.log("New item added");
+});
+
+removeItemBtn.addEventListener("click", () =>{
+    //remove last item if exists
+    if(todoList.lastChild){
+        todoList.removeChild(todoList.lastChild);
+        console.log("Last item removed");
+    }
+});
+
+
+
+
+
